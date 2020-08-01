@@ -35,6 +35,7 @@ const NowPlaying = () => {
     >
       <Skeleton isLoaded={data}>
         <Image
+          alt={data && (data?.artist || 'Spotify')}
           height="60px"
           width="60px"
           borderRadius={8}

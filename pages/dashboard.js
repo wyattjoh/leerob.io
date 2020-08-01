@@ -17,6 +17,7 @@ import Gumroad from '../components/metrics/Gumroad';
 import Unsplash from '../components/metrics/Unsplash';
 import YouTube from '../components/metrics/Youtube';
 import TopTracks from '../components/TopTracks';
+import TopArtists from '../components/TopArtists';
 import { CustomLink } from '../components/MDXComponents';
 
 const url = 'https://leerob.io/dashboard';
@@ -90,7 +91,7 @@ const Dashboard = () => {
             <YouTube />
             <SimpleGrid columns={[1, 1, 2]} spacing={4} mb={4}>
               <Analytics />
-              <GitHub />
+              {/* <GitHub /> */}
             </SimpleGrid>
             <SimpleGrid columns={[1, 1, 2]} spacing={4} mb={4}>
               <Gumroad />
@@ -98,12 +99,13 @@ const Dashboard = () => {
             </SimpleGrid>
           </Flex>
           <Heading letterSpacing="tight" as="h2" size="xl">
-            Top Tracks
+            Top Artists / Tracks
           </Heading>
           <Text color={secondaryTextColor[colorMode]}>
-            Curious what I'm currently jamming to? Here's my top tracks on
-            Spotify updated daily.
+            Curious what I'm currently jamming to? Here's my top artists and
+            tracks on Spotify updated daily.
           </Text>
+          <TopArtists />
           <TopTracks />
         </Stack>
       </Container>
